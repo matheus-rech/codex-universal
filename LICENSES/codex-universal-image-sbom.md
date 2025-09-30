@@ -124,4 +124,3 @@ Generated for the OpenAI dev Docker image
 | axios | latest | https://www.npmjs.com/package/axios | npm | MIT |
 | date-fns | latest | https://www.npmjs.com/package/date-fns | npm | MIT |
 | clsx | latest | https://www.npmjs.com/package/clsx | npm | MIT |
-| supabase | latest | https://www.npmjs.com/package/supabase | npm | MIT |
