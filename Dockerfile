@@ -165,6 +165,25 @@ RUN git -c advice.detachedHead=0 clone --branch "$NVM_VERSION" --depth 1 https:/
     && pnpm store prune || true \
     && yarn cache clean || true
 
+# Install additional npm packages for research and medicine
+RUN . $NVM_DIR/nvm.sh \
+    && nvm use "$NODE_VERSION" \
+    # PDF Processing
+    && npm install -g pdfjs-dist react-pdf @react-pdf/renderer pdf-lib pdfmake \
+    # Supabase Integration
+    && npm install -g @supabase/supabase-js @supabase/auth-helpers-nextjs @supabase/auth-helpers-react \
+    # Forms & Data
+    && npm install -g react-hook-form zod @hookform/resolvers \
+    # Testing & Linting (eslint and prettier already installed)
+    && npm install -g @typescript-eslint/eslint-plugin jest @testing-library/react @testing-library/jest-dom vitest \
+    # Development Tools
+    && npm install -g dotenv tsx \
+    # Utilities
+    && npm install -g axios date-fns clsx \
+    # Supabase CLI
+    && npm install -g supabase \
+    && npm cache clean --force || true
+
 ### BUN ###
 
 ARG BUN_VERSION=1.2.14

@@ -66,4 +66,26 @@ In addition to the packages specified in the table above, the following packages
 - `erlang`: 27.1.2
 - `elixir`: 1.18.3
 
+### Additional npm packages for research and medicine
+
+The following npm packages are globally installed for research and medical applications:
+
+**PDF Processing:**
+- `pdfjs-dist`, `react-pdf`, `@react-pdf/renderer`, `pdf-lib`, `pdfmake`
+
+**Supabase Integration:**
+- `@supabase/supabase-js`, `@supabase/auth-helpers-nextjs`, `@supabase/auth-helpers-react`, `supabase` (CLI)
+
+**Forms & Data:**
+- `react-hook-form`, `zod`, `@hookform/resolvers`
+
+**Testing & Linting:**
+- `@typescript-eslint/eslint-plugin`, `jest`, `@testing-library/react`, `@testing-library/jest-dom`, `vitest`
+
+**Development Tools:**
+- `dotenv`, `tsx`
+
+**Utilities:**
+- `axios`, `date-fns`, `clsx`
+
 See [Dockerfile](Dockerfile) for the full details of installed packages.
