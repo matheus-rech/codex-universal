@@ -191,7 +191,7 @@ jobs:
             docker buildx imagetools create \
               -t "$REGISTRY/$IMAGE_NAME:latest" \
               -t "$REGISTRY/$IMAGE_NAME:${GITHUB_SHA}" \
-              $IMAGES
+              "$IMAGES"
           else
             echo "ERROR: No images were built successfully!"
             exit 1
