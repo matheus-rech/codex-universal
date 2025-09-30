@@ -172,15 +172,23 @@ jobs:
           # Determine which images were built successfully
           IMAGES=""
           if [ "${{ needs.build-amd64.outputs.success }}" == "true" ]; then
-            echo "AMD64 build succeeded"
-            IMAGES="$IMAGES $REGISTRY/$IMAGE_NAME@${{ needs.build-amd64.outputs.digest }}"
+            if [ -n "${{ needs.build-amd64.outputs.digest }}" ]; then
+              echo "AMD64 build succeeded"
+              IMAGES="$IMAGES $REGISTRY/$IMAGE_NAME@${{ needs.build-amd64.outputs.digest }}"
+            else
+              echo "AMD64 build succeeded but digest is missing - skipping"
+            fi
           else
             echo "AMD64 build failed - skipping"
           fi
           
           if [ "${{ needs.build-arm64.outputs.success }}" == "true" ]; then
-            echo "ARM64 build succeeded"
-            IMAGES="$IMAGES $REGISTRY/$IMAGE_NAME@${{ needs.build-arm64.outputs.digest }}"
+            if [ -n "${{ needs.build-arm64.outputs.digest }}" ]; then
+              echo "ARM64 build succeeded"
+              IMAGES="$IMAGES $REGISTRY/$IMAGE_NAME@${{ needs.build-arm64.outputs.digest }}"
+            else
+              echo "ARM64 build succeeded but digest is missing - skipping"
+            fi
           else
             echo "ARM64 build failed - skipping"
           fi
