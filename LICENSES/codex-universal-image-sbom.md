@@ -103,3 +103,6 @@ Generated for the OpenAI dev Docker image
 | yarn | latest | https://yarnpkg.com | corepack | BSD-2-Clause |
 | pnpm | latest | https://pnpm.io | corepack | MIT |
 | npm | latest | https://www.npmjs.com | corepack | Artistic-2.0 |
+| prettier | latest | https://www.npmjs.com/package/prettier | npm | MIT |
+| eslint | latest | https://www.npmjs.com/package/eslint | npm | MIT |
+| typescript | latest | https://www.npmjs.com/package/typescript | npm | Apache-2.0 |
