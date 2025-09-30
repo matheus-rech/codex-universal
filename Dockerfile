@@ -175,7 +175,7 @@ RUN . $NVM_DIR/nvm.sh \
     # Forms & Data
     && npm install -g react-hook-form zod @hookform/resolvers \
     # Testing & Linting (eslint and prettier already installed)
-    && npm install -g eslint prettier @typescript-eslint/eslint-plugin jest @testing-library/react @testing-library/jest-dom vitest \
+    && npm install -g @typescript-eslint/eslint-plugin jest @testing-library/react @testing-library/jest-dom vitest \
     # Development Tools
     && npm install -g dotenv tsx \
     # Utilities
