@@ -90,16 +90,29 @@ Generated for the OpenAI dev Docker image
 | nvm | v0.40.2 | https://github.com/nvm-sh/nvm | git clone | MIT |
 | Python | 3.10, 3.11.12, 3.12, 3.13 | https://www.python.org | pyenv | Python-2.0 |
 | Node.js | 18, 20, 22 | https://nodejs.org | nvm | MIT |
-| Java | OpenJDK 21 | https://openjdk.org | apt | GPL-2.0 with Classpath Exception |
-| Ruby | system default | https://www.ruby-lang.org | apt | Ruby / BSD dual-license |
-| Rust | stable | https://www.rust-lang.org | rustup | MIT OR Apache-2.0 |
-| poetry | latest | https://python-poetry.org | pipx | MIT |
-| uv | latest | https://pypi.org/project/uv | pipx | MIT |
+| Java | OpenJDK 21, 17, 11 | https://openjdk.org | mise | GPL-2.0 with Classpath Exception |
+| Ruby | 3.2.3, 3.3.8, 3.4.4 | https://www.ruby-lang.org | mise | Ruby / BSD dual-license |
+| Rust | 1.89.0, 1.88.0, 1.87.0, 1.86.0, 1.85.1, 1.84.1, 1.83.0 | https://www.rust-lang.org | rustup | MIT OR Apache-2.0 |
+| Go | 1.24.3, 1.23.8, 1.22.12 | https://golang.org | mise | BSD-3-Clause |
+| PHP | 8.4, 8.3, 8.2 | https://www.php.net | mise | PHP-3.01 |
+| Swift | 6.1, 5.10.1 | https://swift.org | mise | Apache-2.0 |
+| Erlang | 27.1.2 | https://www.erlang.org | mise | Apache-2.0 |
+| Elixir | 1.18.3 | https://elixir-lang.org | mise | Apache-2.0 |
+| poetry | 2.1.* | https://python-poetry.org | pipx | MIT |
+| uv | 0.7.* | https://pypi.org/project/uv | pipx | MIT |
 | ruff | latest | https://pypi.org/project/ruff | pip | MIT |
 | black | latest | https://pypi.org/project/black | pip | MIT |
 | mypy | latest | https://pypi.org/project/mypy | pip | MIT |
 | pyright | latest | https://pypi.org/project/pyright | pip | MIT |
 | isort | latest | https://pypi.org/project/isort | pip | MIT |
+| pytest | latest | https://pypi.org/project/pytest | pip | MIT |
+| cpplint | 2.0.* | https://pypi.org/project/cpplint | pipx | BSD-3-Clause |
+| clang-tidy | 20.1.* | https://pypi.org/project/clang-tidy | pipx | Apache-2.0 with LLVM exceptions |
+| clang-format | 20.1.* | https://pypi.org/project/clang-format | pipx | Apache-2.0 with LLVM exceptions |
+| cmakelang | 0.6.* | https://pypi.org/project/cmakelang | pipx | GPL-3.0 |
+| gradle | 8.14 | https://gradle.org | mise | Apache-2.0 |
+| maven | 3.9.10 | https://maven.apache.org | mise | Apache-2.0 |
+| golangci-lint | 2.1.6 | https://golangci-lint.run | mise | GPL-3.0 |
 | yarn | latest | https://yarnpkg.com | corepack | BSD-2-Clause |
 | pnpm | latest | https://pnpm.io | corepack | MIT |
 | npm | latest | https://www.npmjs.com | corepack | Artistic-2.0 |
