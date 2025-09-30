@@ -46,13 +46,54 @@ The following environment variables can be set to configure runtime installation
 
 | Environment variable       | Description                | Supported versions                               | Additional packages                                                  |
 | -------------------------- | -------------------------- | ------------------------------------------------ | -------------------------------------------------------------------- |
-| `CODEX_ENV_PYTHON_VERSION` | Python version to install  | `3.10`, `3.11.12`, `3.12`, `3.13`                | `pyenv`, `poetry`, `uv`, `ruff`, `black`, `mypy`, `pyright`, `isort` |
-| `CODEX_ENV_NODE_VERSION`   | Node.js version to install | `18`, `20`, `22`                                 | `corepack`, `yarn`, `pnpm`, `npm`                                    |
+| `CODEX_ENV_PYTHON_VERSION` | Python version to install  | `3.10`, `3.11.12`, `3.12`, `3.13`                | `pyenv`, `poetry`, `uv`, `ruff`, `black`, `mypy`, `pyright`, `isort`, `pytest` |
+| `CODEX_ENV_NODE_VERSION`   | Node.js version to install | `18`, `20`, `22`                                 | `corepack`, `yarn`, `pnpm`, `npm`, see **npm packages** section below |
 | `CODEX_ENV_RUST_VERSION`   | Rust version to install    | `1.83.0`, `1.84.1`, `1.85.1`, `1.86.0`, `1.87.0` |                                                                      |
 | `CODEX_ENV_GO_VERSION`     | Go version to install      | `1.22.12`, `1.23.8`, `1.24.3`                    |                                                                      |
 | `CODEX_ENV_SWIFT_VERSION`  | Swift version to install   | `5.10`, `6.1`                                    |                                                                      |
 | `CODEX_ENV_RUBY_VERSION`   | Ruby version to install  | `3.2.3`, `3.3.8`, `3.4.4`                |                                                                      |
 | `CODEX_ENV_PHP_VERSION`   | PHP version to install  | `8.4`, `8.3`, `8.2`                |                                                                      |
+
+### npm packages
+
+The following npm packages are installed globally for all Node.js versions via nvm's default-packages mechanism:
+
+**Development Tools & Linting:**
+- `prettier` - Code formatter
+- `eslint` - JavaScript linter
+- `typescript` - TypeScript compiler
+- `@typescript-eslint/eslint-plugin` - TypeScript linting rules for ESLint
+- `tsx` - TypeScript execution engine
+
+**Testing & Quality Assurance:**
+- `jest` - JavaScript testing framework
+- `vitest` - Vite-native testing framework
+- `@testing-library/react` - React testing utilities
+- `@testing-library/jest-dom` - Custom Jest matchers for DOM
+
+**PDF Processing:**
+- `pdfjs-dist` - PDF.js library for rendering PDFs
+- `react-pdf` - React component for displaying PDFs
+- `@react-pdf/renderer` - React renderer for creating PDF documents
+- `pdf-lib` - PDF creation and modification library
+- `pdfmake` - PDF document generation library
+
+**Supabase Integration:**
+- `supabase` - Supabase CLI tool
+- `@supabase/supabase-js` - Supabase JavaScript client
+- `@supabase/auth-helpers-nextjs` - Supabase auth helpers for Next.js
+- `@supabase/auth-helpers-react` - Supabase auth helpers for React
+
+**Forms & Data Validation:**
+- `react-hook-form` - Performant React forms library
+- `zod` - TypeScript-first schema validation
+- `@hookform/resolvers` - Validation resolvers for react-hook-form
+
+**Utilities:**
+- `axios` - HTTP client
+- `dotenv` - Environment variable loader
+- `date-fns` - Modern date utility library
+- `clsx` - Utility for constructing className strings
 
 
 
@@ -60,10 +101,14 @@ The following environment variables can be set to configure runtime installation
 
 In addition to the packages specified in the table above, the following packages are also installed:
 
-- `bun`: 1.2.10
-- `java`: 21
-- `bazelisk` / `bazel`
+- `bun`: 1.2.14
+- `java`: 21, 17, 11 (amd64 only for Java 11)
+- `bazelisk` / `bazel`: 1.26.0
 - `erlang`: 27.1.2
 - `elixir`: 1.18.3
+- `gradle`: 8.14
+- `maven`: 3.9.10
+- `golangci-lint`: 2.1.6
+- C++ tools: `cpplint`, `clang-tidy`, `clang-format`, `cmakelang`
 
-See [Dockerfile](Dockerfile) for the full details of installed packages.
+See [Dockerfile](Dockerfile) for the full details of installed packages and the **npm packages** section above for globally installed npm packages.
